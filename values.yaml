@@ -18,7 +18,7 @@ controller:
               values:
                 - ingress-nginx
         topologyKey: "kubernetes.io/hostname"
-  replicaCount: 2
+  replicaCount: 1
   admissionWebhooks:
     enabled: true
   service:
@@ -27,6 +27,6 @@ controller:
   metrics:
     enabled: true
     serviceMonitor:
-      enabled: true
+      enabled: false
       additionalLabels:
         robusta: "monitoring"
