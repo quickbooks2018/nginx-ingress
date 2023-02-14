@@ -4,7 +4,7 @@ controller:
     compute-full-forwarded-for: "true"
     use-forwarded-headers: "true"
     proxy-body-size: "0"
-  ingressClass: external-nginx
+  ingressClass: nginx
   ingressClassResource:
     enabled: true
     default: false

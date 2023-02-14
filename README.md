@@ -64,3 +64,29 @@ helm upgrade --install ingress-nginx ingress-nginx \
   --values values.yaml \
   --namespace ingress-nginx --create-namespace
 ```
+
+
+- Sample Application Setup with Helm
+```helm
+helm create hello
+```
+
+
+- Update values.yaml
+- Update Image repo to quickbooks2018/green & tag:latest
+- Enable Ingress & Update className: "external-nginx"
+
+- helm app dry-run
+```helm
+helm template -f hello/values.yaml --namespace app --create-namespace hello/ --dry-run
+```
+
+- helm install app
+```helm
+helm upgrade --install hello -f hello/values.yaml --namespace app --create-namespace hello/ --wait
+```
+
+- Ingress Classes
+```ingress
+kubectl get ingressclasses
+```
