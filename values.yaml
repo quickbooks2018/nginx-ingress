@@ -18,7 +18,7 @@ controller:
               values:
                 - ingress-nginx
         topologyKey: "kubernetes.io/hostname"
-  replicaCount: 1
+  replicaCount: 2
   admissionWebhooks:
     enabled: true
   service:
