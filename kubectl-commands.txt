@@ -48,3 +48,13 @@ kubectl rollout history deployment/nginx --output=yaml | grep "image:\|revision:
 #####################################################
 kubectl rollout undo deployment/nginx --to-revision=1
 #####################################################
+
+#######################
+# Create a replica set
+#######################
+kubectl create rs --help
+
+##############
+# Create a pod
+##############
+kubectl run pod --help
